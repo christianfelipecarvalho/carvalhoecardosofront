@@ -1,10 +1,13 @@
 import './App.css';
-import manutencao from './assets/manutencao.jpg';
+import manutencao from './assets/emmanutencao.png';
+import logo from './assets/preta.png';
 
 function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h1>Carvalho e Cardoso</h1>
+      <div style={{display: 'flex', alignItems: 'left', left:'10%', marginBottom: '-50px', zIndex: '100'}}>
+      <img  src={logo} alt="Imagem manutencao" width={150} height={150}  />
+      </div>
       <img src={manutencao} alt="Imagem manutencao" width={500} height={500} />
       <p>
         Entre em contato pelo WhatsApp: {' '}
