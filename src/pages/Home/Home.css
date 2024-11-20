@@ -1,22 +1,43 @@
 .imagem1{
     width: 100%;
-    display: flex;
 }
 
-.titulo-cec{
+.titulo-cec {
     z-index: 500;
     position: absolute;
-    right: 10%;
-    bottom: 100px;
+    bottom: 20%;
+    margin-bottom: 3.5%;
+    /* margin-bottom: ; */
     font-size: 60px;
     color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    opacity: 0; /* Começa invisível */
+    transition: opacity 2s ease; /* Transição suave para a opacidade */
 }
+.subtitulo-cec{
+    z-index: 500;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: 1.5%;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    opacity: 0; /* Começa invisível */
+    transition: opacity 2.5s ease; 
+}
+.fade-in {
+    opacity: 1; /* Torna visível */
+}
+
+.fade-out {
+    opacity: 0; /* Torna invisível */
+}
+
 .botao{
     z-index: 500;
     position: absolute;
-    right: 12%;
-    bottom: 30px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     color: #fff;
     background-color: red;
@@ -24,7 +45,24 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    width: 250px;
-    height: 60px;
+    width: 200px;
+    height: 50px;
     transition: 0.5s;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
+}
+
+.div-container1{
+    width: 100%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.botao-e-nome{
+    position:absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
