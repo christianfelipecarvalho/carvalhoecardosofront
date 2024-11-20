@@ -47,7 +47,6 @@ function Home() {
       </div>
       <div className='div-container5'>
       <img className='imagem1' src={imagemDUDA1} alt="Logo" />
-
       </div>
       {/* <img  className='imagem4' src={frente} alt="Logo" />
       <img  className='imagem5' src={frente} alt="Logo" />
