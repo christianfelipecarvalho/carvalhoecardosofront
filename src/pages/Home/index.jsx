@@ -15,6 +15,10 @@ function Home() {
   function handleClickSobre() {
     navigate('/sobrenos'); // Redireciona para a página '/sobre'
   }
+  function handleClickProjetos() {
+    navigate('/servicos'); // Redireciona para a página '/servicos'
+  }
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,22 +39,31 @@ function Home() {
 
       </div>
       <div className='div-container2'>
+        <h1 className='titulo2'>ARQUITETURA</h1>
+        <p className='subtitulo2'>Contamos com uma equipe de arquitetos, engenheiros e designers para executar projetos com o máximo de detalhamento possivel.</p>
+        <button className='botao2' onClick={handleClickProjetos}>Projetos</button>
         <img className='imagem1' src={imagem3d1} alt="Logo" />
 
       </div>
       <div className='div-container3'>
+        <p className='subtitulo3'>Quebramos os limites</p>
+        <h1 className='titulo3  '>PROJETE O FUTURO</h1>
+        <button className='botao3' onClick={handleClickProjetos}>Ver mais</button>
         <img className='imagem1' src={imagem3d2} alt="Logo" />
 
       </div>
       <div className='div-container4'>
-      <img className='imagem1' src={imagemDIEGO1} alt="Logo" />
+        <p className='subtitulo4'>LIBERTE A CRIATIVIDADE</p>
+        <h1 className='titulo4'>DÊ VIDA ÀS SUAS IDEIAS</h1>
+        <button className='botao4' onClick={handleClickProjetos}>Ver mais</button>
+        <img className='imagem1' src={imagemDIEGO1} alt="Logo" />
       </div>
       <div className='div-container5'>
-      <img className='imagem1' src={imagemDUDA1} alt="Logo" />
+      <p className='subtitulo5'>LIDERE O CAMINHO</p>
+        <h1 className='titulo5'>INOVE E INSPIRE</h1>
+        <button className='botao5' onClick={handleClickProjetos}>Ver mais</button>
+        <img className='ultimaImagem' src={imagemDUDA1} alt="Logo" />
       </div>
-      {/* <img  className='imagem4' src={frente} alt="Logo" />
-      <img  className='imagem5' src={frente} alt="Logo" />
-      <img  className='imagem6' src={frente} alt="Logo" /> */}
     </div>
   );
 }
