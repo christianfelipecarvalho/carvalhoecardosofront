@@ -16,8 +16,8 @@ function RoutesApp() {
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/sobrenos" element={<SobreNos />} />
-                <Route path="/home" element={<Servicos />} />
-                <Route path="/home" element={<Clientes />} />
+                <Route path="/servicos" element={<Servicos />} />
+                <Route path="/clientes" element={<Clientes />} />
                 <Route path="/contato" element={<Contato />} />
             </Routes>
             <Footer />
