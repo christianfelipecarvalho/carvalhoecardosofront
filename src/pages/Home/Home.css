@@ -1,6 +1,17 @@
 .imagem1{
     width: 100%;
 }
+.hidden-card {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: all 0.9s ease-out; /* Suavidade na transição */
+}
+
+/* Estado final: visível e na posição original */
+.visible-card {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .titulo-cec {
     z-index: 500;
