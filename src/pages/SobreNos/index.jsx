@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
-import bianca from '../../assets/bianca.jpg';
-import henrique from '../../assets/henrique.jpg';
-import joao from '../../assets/joao.jpg';
-import tiago from '../../assets/tiago.jpg';
-import wilian from '../../assets/wilian.jpg';
+import bianca from '../../assets/bianca2.jpg';
+import equipe from '../../assets/equipe.jpg';
+import henrique from '../../assets/henrique2.jpg';
+import joao from '../../assets/joao2.jpg';
+import laura from '../../assets/laura2.jpg';
+import tiago from '../../assets/tiago2.jpg';
+import wilian from '../../assets/wilian2.jpg';
 import '../SobreNos/SobreNos.css';
 
 
@@ -33,9 +35,12 @@ function SobreNos() {
           <h1 className='titulo-principal'>Carvalho & Cardoso</h1>
           <p>Nossa empresa possui um profundo know how e atua em diversos segmentos da construção civil, buscando entregar bons resultados e competência no desenvolvimento dos serviços, garantindo a satisfação total dos nossos clientes. Nossa equipe é multidisciplinar e atualizada e procura possibilitar a otimização de materiais, custo, tempo e trabalho na obra.
           </p>
-            A empresa possui corpo técnico e administrativo altamente qualificado, que visa a melhoria contínua de seus processos, gerando soluções diferenciadas aos clientes. Além disso, contamos com engenheiros e peritos especializados em diferentes áreas da engenharia.
-            <p></p>
+          A empresa possui corpo técnico e administrativo altamente qualificado, que visa a melhoria contínua de seus processos, gerando soluções diferenciadas aos clientes. Além disso, contamos com engenheiros e peritos especializados em diferentes áreas da engenharia.
+          <p></p>
         </div>
+          <div>
+            <img className='imgequipe' src={equipe} alt="Logo" />
+          </div>
       </div>
       <div className='div-sobrenos1 hidden-card'>
         <div>
@@ -95,7 +100,7 @@ function SobreNos() {
           <p>Mestre em Engenharia civil...</p>
         </div>
         <div className='div-inversa-imagem'>
-          <img className='img-inversa' src={bianca} alt="Logo" />
+          <img className='img-inversa' src={laura} alt="Logo" />
         </div>
       </div>
     </div>
