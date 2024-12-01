@@ -1,4 +1,12 @@
 
+import arq1 from '../../assets/servicos/arq1.png';
+import arq2 from '../../assets/servicos/arq2.png';
+import arq3 from '../../assets/servicos/arq3.png';
+import arq4 from '../../assets/servicos/arq4.png';
+import est2 from '../../assets/servicos/EST 2.jpeg';
+import est4 from '../../assets/servicos/EST 4.jpeg';
+import est3 from '../../assets/servicos/EST 5.jpeg';
+import est1 from '../../assets/servicos/EST 7.jpeg';
 import glp1 from '../../assets/servicos/GLP 1.jpeg';
 import glp2 from '../../assets/servicos/GLP 2.jpeg';
 import glp3 from '../../assets/servicos/GLP 3.jpeg';
@@ -89,21 +97,28 @@ function Servicos() {
       </div>
       <div className='div-container-7'>
         <h1>PROJETO ARQUITETÔNICO</h1>
-        <p> O projeto arquitetônico é o ponto de partida para a concepção de uma edificação. Este projeto leva em consideração todas as necessidades e preferências do cliente, tendo como objetivo, a definição da melhor forma de construir, a organização dos espaços e o posicionamento no terreno. Além disso, o documento é necessário para aprovação e regularização nos órgãos competentes, bem como, serve para orientar o andamento da obra e solucionar qualquer dúvida que possa surgir durante a construção..</p>
-        <div>
+        <p className='paragrafo'> O projeto arquitetônico é o ponto de partida para a concepção de uma edificação. Este projeto leva em consideração todas as necessidades e preferências do cliente, tendo como objetivo, a definição da melhor forma de construir, a organização dos espaços e o posicionamento no terreno. Além disso, o documento é necessário para aprovação e regularização nos órgãos competentes, bem como, serve para orientar o andamento da obra e solucionar qualquer dúvida que possa surgir durante a construção..</p>
+        <div className='div-ppci'>
+          <img className='imgs-ppci' src={arq1} alt="Logo" />
+          <img className='imgs-ppci' src={arq2} alt="Logo" />
+          <img className='imgs-ppci' src={arq3} alt="Logo" />
+          <img className='imgs-ppci' src={arq4} alt="Logo" />
 
         </div>
       </div>
       <div className='div-container-8'>
         <h1>PROJETO ESTRUTURAL</h1>
-        <p>O projeto estrutural tem foco no dimensionamento e detalhamento dos elementos estruturais (fundação, pilares, vigas e lajes), que têm como objetivo sustentar a edificação, transmitindo as cargas acidentais e permanentes ao solo. A partir da análise do projeto arquitetônico e do estudo das características do solo, é dimensionado todos os elementos de sustentação do imóvel.</p>
-        <div>
-
+        <p className='paragrafo'>O projeto estrutural tem foco no dimensionamento e detalhamento dos elementos estruturais (fundação, pilares, vigas e lajes), que têm como objetivo sustentar a edificação, transmitindo as cargas acidentais e permanentes ao solo. A partir da análise do projeto arquitetônico e do estudo das características do solo, é dimensionado todos os elementos de sustentação do imóvel.</p>
+        <div className='div-estrutural'>
+          <img className='imgs-estrutural' src={est1} alt="Logo" />
+          <img className='imgs-estrutural' src={est2} alt="Logo" />
+          <img className='imgs-estrutural' src={est3} alt="Logo" />
+          <img className='imgs-estrutural' src={est4} alt="Logo" />
         </div>
       </div>
       <div className='div-container-9'>
         <h1>PROJETO HIDROSSANITÁRIO</h1>
-        <p>O projeto hidrossanitário engloba um conjunto de projetos. O projeto hidráulico indica a localização das tubulações e componentes hidráulicos, desde o recebimento da água no hidrômetro até a chegada dessa água às peças como chuveiro, torneiras, entre outros. O sistema pluvial e o reaproveitamento de águas, estão ligados a captação de águas da chuva por meio de calhas. Já o projeto sanitário, compreende todo o sistema de coleta da rede de esgoto e água poluída de uma edificação.</p>
+        <p className='paragrafo'>O projeto hidrossanitário engloba um conjunto de projetos. O projeto hidráulico indica a localização das tubulações e componentes hidráulicos, desde o recebimento da água no hidrômetro até a chegada dessa água às peças como chuveiro, torneiras, entre outros. O sistema pluvial e o reaproveitamento de águas, estão ligados a captação de águas da chuva por meio de calhas. Já o projeto sanitário, compreende todo o sistema de coleta da rede de esgoto e água poluída de uma edificação.</p>
         <div>
 
         </div>

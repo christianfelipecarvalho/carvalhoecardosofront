@@ -27,7 +27,7 @@
 }
 .tituloprincipal{
     margin-left: 50px;
-    margin-top: 15%;
+    margin-top: 13%;
     align-items: center;
     background-color: rgb(0, 0, 0);
 }
@@ -46,7 +46,22 @@
     gap: 20px; /* Espaçamento entre as imagens */
     padding: 20px; /* Espaço interno para evitar colagem das bordas */
 }
+.div-estrutural {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem linha quando necessário */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 20px; /* Espaçamento entre as imagens */
+    padding: 20px; /* Espaço interno para evitar colagem das bordas */
+}
 
+.imgs-estrutural {
+    width: 45%; /* Ajusta para caber duas por linha */
+    height: 500px; /* Mantém a proporção da imagem */
+    max-width: 500px; /* Limite máximo para melhorar o layout */
+    border-radius: 10px; /* Suaviza as bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
 .imgs-ppci {
     width: 45%; /* Ajusta para caber duas por linha */
     height: auto; /* Mantém a proporção da imagem */
@@ -110,7 +125,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #453030;
+    background-color: #131313;
     width: 100%;
 }
 .div-container-7{
@@ -118,7 +133,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #491919;
+    background-color: #1d1d1d;
     width: 100%;
 }
 .div-container-8{
