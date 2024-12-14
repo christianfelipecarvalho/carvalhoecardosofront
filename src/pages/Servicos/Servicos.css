@@ -41,7 +41,7 @@
 }
 .div-ppci {
     display: flex;
-    flex-wrap: wrap; /* Permite que as imagens quebrem linha quando necessário */
+    /* flex-wrap: wrap; */
     justify-content: center; /* Centraliza as imagens */
     gap: 20px; /* Espaçamento entre as imagens */
     padding: 20px; /* Espaço interno para evitar colagem das bordas */
@@ -63,13 +63,30 @@
     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
 }
 .imgs-ppci {
-    width: 45%; /* Ajusta para caber duas por linha */
+    width: 55%; /* Ajusta para caber duas por linha */
     height: auto; /* Mantém a proporção da imagem */
-    max-width: 300px; /* Limite máximo para melhorar o layout */
+    max-width: 500px; /* Limite máximo para melhorar o layout */
     border-radius: 10px; /* Suaviza as bordas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
 }
+
+.imgs-elet {
+    width: 100%; /* Ajusta para caber duas por linha */
+    height: 500px; /* Mantém a proporção da imagem */
+    max-width: 500px; /* Limite máximo para melhorar o layout */
+    border-radius: 10px; /* Suaviza as bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+.imgs-3d {
+    width: 80%; /* Ajusta para caber duas por linha */
+    max-width: 500px; /* Limite máximo para melhorar o layout */
+    border-radius: 10px; /* Suaviza as bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
 .imgs-spda {
     width: 100%; /* Ajusta para caber duas por linha */
     height: auto; /* Mantém a proporção da imagem */
@@ -149,7 +166,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #3d1682;
+    background-color: #1e1e1e;
     width: 100%;
 }
 .div-container-10{
@@ -165,7 +182,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #883434;
+    background-color: #060606;
     width: 100%;
 }
 .div-container-12{
@@ -173,7 +190,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4a4a4a;
+    background-color: #2d2d2d;
     width: 100%;
 }
 .div-container-13{
@@ -181,7 +198,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6c5656;
+    background-color: #242424;
     width: 100%;
 }
 .div-container-14{
@@ -189,6 +206,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #150b0b;
+    background-color: #1c1c1c;
     width: 100%;
 }

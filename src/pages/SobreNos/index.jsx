@@ -33,10 +33,9 @@ function SobreNos() {
       <div className='div-sobrenos-principal hidden-card'>
         <div className='texto-titulo'>
           <h1 className='titulo-principal'>Carvalho & Cardoso</h1>
-          <p>Nossa empresa possui um profundo know how e atua em diversos segmentos da construção civil, buscando entregar bons resultados e competência no desenvolvimento dos serviços, garantindo a satisfação total dos nossos clientes. Nossa equipe é multidisciplinar e atualizada e procura possibilitar a otimização de materiais, custo, tempo e trabalho na obra.
-          </p>
+          <p className='paragrafo-sobrenos'>Nossa empresa possui um profundo know how e atua em diversos segmentos da construção civil, buscando entregar bons resultados e competência no desenvolvimento dos serviços, garantindo a satisfação total dos nossos clientes. Nossa equipe é multidisciplinar e atualizada e procura possibilitar a otimização de materiais, custo, tempo e trabalho na obra.
           A empresa possui corpo técnico e administrativo altamente qualificado, que visa a melhoria contínua de seus processos, gerando soluções diferenciadas aos clientes. Além disso, contamos com engenheiros e peritos especializados em diferentes áreas da engenharia.
-          <p></p>
+          </p>
         </div>
           <div>
             <img className='imgequipe' src={equipe} alt="Logo" />

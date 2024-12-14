@@ -1,10 +1,29 @@
 .div-geral-clientes{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     background-color: #000;
     color: #fff;
-    width: 100%;
-    height: 900px;
+}
+.div-estrutura{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; /* Centraliza as imagens */
+        gap: 15px; /* Espaçamento entre as imagens */
+        padding: 20px; /* Espaço interno para evitar colagem das bordas */
+}
+.div-container-parceiros{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.imgs-parceiros {
+    width: 55%; /* Ajusta para caber duas por linha */
+    height: 300px; /* Mantém a proporção da imagem */
+    max-width: 300px; /* Limite máximo para melhorar o layout */
+    border-radius: 10px; /* Suaviza as bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
+    object-fit: contain; /* Garante que a imagem preencha o espaço sem distorcer */
 }
