@@ -5,7 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', 'src/components/ui/**'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -29,10 +29,20 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
+      'react/prop-types': 'off',
+      'react-hooks/set-state-in-effect': 'off',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
+    },
+  },
+  {
+    // React Three Fiber elements (<mesh position args ...>) are not DOM nodes.
+    files: ['src/components/house3d/**/*.{js,jsx}', 'src/lab/**/*.{js,jsx}'],
+    rules: {
+      'react/no-unknown-property': 'off',
+      'react-refresh/only-export-components': 'off',
     },
   },
 ]

@@ -1,109 +1,12 @@
-import { useEffect } from 'react';
-import bianca from '../../assets/bianca2.jpg';
-import equipe from '../../assets/equipe.jpg';
-import henrique from '../../assets/henrique2.jpg';
-import joao from '../../assets/joao2.jpg';
-import laura from '../../assets/laura2.jpg';
-import tiago from '../../assets/tiago2.jpg';
-import wilian from '../../assets/wilian2.jpg';
-import '../SobreNos/SobreNos.css';
-
-
-function SobreNos() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible-card');
-            observer.unobserve(entry.target); // Para evitar animar novamente
-          }
-        });
-      },
-      { threshold: 0.1 } // Percentual de visibilidade do elemento para ativar a animação
-    );
-
-    const hiddenElements = document.querySelectorAll('.hidden-card');
-    hiddenElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect(); // Cleanup ao desmontar o componente
-  }, []);
-  return (
-    <div className='div-geral'>
-      <div className='div-sobrenos-principal hidden-card'>
-        <div className='texto-titulo'>
-          <h1 className='titulo-principal'>Carvalho & Cardoso</h1>
-          <p className='paragrafo-sobrenos'>Nossa empresa possui um profundo know how e atua em diversos segmentos da construção civil, buscando entregar bons resultados e competência no desenvolvimento dos serviços, garantindo a satisfação total dos nossos clientes. Nossa equipe é multidisciplinar e atualizada e procura possibilitar a otimização de materiais, custo, tempo e trabalho na obra.
-          A empresa possui corpo técnico e administrativo altamente qualificado, que visa a melhoria contínua de seus processos, gerando soluções diferenciadas aos clientes. Além disso, contamos com engenheiros e peritos especializados em diferentes áreas da engenharia.
-          </p>
-        </div>
-          <div>
-            <img className='imgequipe' src={equipe} alt="Logo" />
-          </div>
-      </div>
-      <div className='div-sobrenos1 hidden-card'>
-        <div>
-          <img className='imgJoao' src={joao} alt="Logo" />
-        </div>
-        <div className='titulo'>
-          <h3>Eng. Civil</h3>
-          <h1>João Pedro Felipe Carvalho</h1>
-          <p>Formado pela Escola Superior de Criciúma. Especializado em dimensionamento de sistema de chuveiros automáticos (SPK) e sistema hidráulico preventivo (SHP) pelo Instituto Brasileiro de Educação Continuada (INBEC). Eletrotécnico pelo Instituto Federal de Santa Catarina. Possui experiência em elaboração de projeto preventivo contra Incêndio e pânico (PPCI), bem como laudos para o Corpo de Bombeiros.</p>
-        </div>
-
-      </div>
-      <div className='div-sobrenos2 hidden-card'>
-        <div className='titulo-inverso'>
-          <h3>Eng. Civil</h3>
-          <h1>Henrique Ferreira</h1>
-          <p>Formado pelo Centro Universitário Campo Real (Guarapuava/PR), com complementação educacional em Desenvolvimento de Programas para Análise de Sistema. Possui experiência em projetos e detalhamento de estrutura de concreto armado e estrutura metálica, atuante em gerenciamento de obras públicas, com experiência em produção de orçamentos estimativos, cronogramas físico-financeiro, Curva ABC e Composição de benefício e despesas indiretas,  totalizando mais de R$ 35 milhões em projetos gerenciados.</p>
-        </div>
-        <div className='div-inversa-imagem'>
-          <img className='img-inversa' src={henrique} alt="Logo" />
-        </div>
-      </div>
-      <div className='div-sobrenos3 hidden-card'>
-        <div>
-          <img className='imgJoao' src={wilian} alt="Logo" />
-        </div>
-        <div className='titulo'>
-          <h3>Arquiteto e Urbanista</h3>
-          <h1>Willian Martins</h1>
-          <p>Formado pela Universidade do Extremo Sul Catarinense UNESC. Técnico em Design pela SATC, possui experiência com a criação e desenvolvimento de projetos arquitetônicos, detalhamento técnico e modelagem 3D. Profissional dedicado e apaixonado pela arquitetura, especializado em projetar espaços funcionais, esteticamente agradáveis.</p>
-        </div>
-      </div>
-      <div className='div-sobrenos4 hidden-card'>
-        <div className='titulo-inverso'>
-          <h3>Eng. Civil</h3>
-          <h1>Tiago Zeferino Borges</h1>
-          <p>Formado pela universidade do sul catarinense (UNISUL), com experiência em execução de obras, hoje atua na elaboração projetos hidrossanitários, drenagem, dimensionamento pluvial, e projetos elétricos.</p>
-        </div>
-        <div className='div-inversa-imagem'>
-          <img className='img-inversa' src={tiago} alt="Logo" />
-        </div>
-      </div>
-      <div className='div-sobrenos5 hidden-card'>
-        <div>
-          <img className='imgJoao' src={bianca} alt="Logo" />
-        </div>
-        <div className='titulo'>
-          <h3>Administração</h3>
-          <h1>Bianca Carvalho</h1>
-          <p>Formada pelo Senac e possui certificações em Gestão Financeira e Técnicas de Gestão pela Microlins. Atualmente, ocupa a posição de líder no setor financeiro da Carvalho e Cardoso, sendo também responsável pela gestão estratégica de contratos da empresa.</p>
-        </div>
-      </div>
-      <div className='div-sobrenos6 hidden-card'>
-        <div className='titulo-inverso'>
-          <h3>Eng. Civil</h3>
-          <h1>Laura</h1>
-          <p>Mestre em Engenharia civil...</p>
-        </div>
-        <div className='div-inversa-imagem'>
-          <img className='img-inversa' src={laura} alt="Logo" />
-        </div>
-      </div>
-    </div>
-  );
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+import equipe from '../../assets/optimized/equipe-atual.webp';
+import joao from '../../assets/optimized/joao.webp';
+import henrique from '../../assets/optimized/henrique.webp';
+import wilian from '../../assets/optimized/wilian.webp';
+import bianca from '../../assets/optimized/bianca.webp';
+import laura from '../../assets/optimized/laura.webp';
+const team = [[joao, 'João Pedro Felipe Carvalho', 'Engenheiro civil', 'Projetos preventivos contra incêndio, sistemas de sprinklers e hidrantes.'], [henrique, 'Henrique Ferreira', 'Engenheiro civil', 'Estruturas de concreto e metálicas, orçamentos e gerenciamento de obras.'], [wilian, 'Willian Martins', 'Arquiteto e urbanista', 'Projetos arquitetônicos, detalhamento técnico e modelagem 3D.'], [bianca, 'Bianca Carvalho', 'Administração', 'Gestão financeira e estratégica de contratos.'], [laura, 'Laura', 'Engenheira civil', 'Mestre em Engenharia Civil.']];
+export default function SobreNos() {
+  return <div className="inner-page"><section className="page-intro section-wrap"><span className="eyebrow">O escritório</span><h1>Diferentes especialidades.<br />O mesmo compromisso.</h1><p>A Carvalho & Cardoso reúne profissionais de engenharia, arquitetura e gestão para pensar cada projeto de forma integrada.</p></section><section className="office-section section-wrap"><img src={equipe} alt="Equipe Carvalho e Cardoso" /><div><h2>Uma boa construção<br />começa com pessoas.</h2><p>Atuamos em diferentes segmentos da construção civil, com foco em soluções que consideram materiais, custos, tempo e execução.</p><p>Nosso corpo técnico e administrativo trabalha de forma colaborativa, aproximando as necessidades de cada cliente das decisões que fazem a diferença no projeto.</p></div></section><section className="section-wrap team-section"><div className="section-heading"><h2>Conheça nossa equipe.</h2><p>Conhecimento compartilhado.<br />Cuidado em cada entrega.</p></div><div className="team-grid">{team.map(([image, name, role, text]) => <article className="team-member" key={name}><div className="team-photo"><img src={image} alt={name} loading="lazy" /><span aria-hidden="true" className="team-photo-caption">Carvalho & Cardoso</span></div><span className="eyebrow">{role}</span><h3>{name}</h3><p>{text}</p></article>)}</div></section><section className="contact-banner"><h2>Seu projeto merece<br />um olhar completo.</h2><Link to="/contato" className="button">Converse com a equipe <ArrowUpRight /></Link></section></div>;
 }
-
-export default SobreNos;

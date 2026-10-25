@@ -1,89 +1,27 @@
-
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import imagemDIEGO1 from '../../assets/DIEGO-1.jpg';
-import imagemDUDA1 from '../../assets/DUDA-1.jpg';
-import imagem3d1 from '../../assets/imagem1.jpg';
-import imagem3d2 from '../../assets/imagem22.jpg';
-import frente from '../../assets/primeiraeditada.jpeg';
-import '../Home/Home.css';
-
-function Home() {
-  const navigate = useNavigate();
-  const [fade, setFade] = useState(false);
-
-  function handleClickSobre() {
-    navigate('/sobrenos'); // Redireciona para a página '/sobre'
-  }
-  function handleClickProjetos() {
-    navigate('/servicos'); // Redireciona para a página '/servicos'
-  }
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible-card');
-            observer.unobserve(entry.target); // Para evitar animar novamente
-          }
-        });
-      },
-      { threshold: 0.1 } // Percentual de visibilidade do elemento para ativar a animação
-    );
-
-    const hiddenElements = document.querySelectorAll('.hidden-card');
-    hiddenElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect(); // Cleanup ao desmontar o componente
-  }, []);
-
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(prev => !prev); // Alterna entre fade-in e fade-out
-    }, 6000); // Troca a cada 6 segundos
-    return () => clearInterval(interval); // Limpa o intervalo ao desmontar
-  }, []);
-
-  return (
-    <div className='div-geral'>
-      <div className='div-container1 hidden-card'>
-        <div className='botao-e-nome'>
-          <h1 className={`titulo-cec ${fade ? 'fade-in' : 'fade-out'}`}>Carvalho & Cardoso</h1>
-          <p className={`subtitulo-cec ${fade ? 'fade-in' : 'fade-out'}`}>Criando espaços que contam historias</p>
-          <button className={`botao ${fade ? 'fade-in' : 'fade-out'}`} onClick={handleClickSobre}>Sobre nós</button>
-        </div>
-        <img className='imagem1' src={frente} alt="Logo" />
-
-      </div>
-      <div className='div-container2 hidden-card'>
-        <h1 className='titulo2'>ARQUITETURA</h1>
-        <p className='subtitulo2'>Contamos com uma equipe de arquitetos, engenheiros e designers para executar projetos com o máximo de detalhamento possivel.</p>
-        <button className='botao2' onClick={handleClickProjetos}>Projetos</button>
-        <img className='imagem1' src={imagem3d1} alt="Logo" />
-
-      </div>
-      <div className='div-container3 hidden-card'>
-        <p className='subtitulo3'>Quebramos os limites</p>
-        <h1 className='titulo3  '>PROJETE O FUTURO</h1>
-        <button className='botao3' onClick={handleClickProjetos}>Ver mais</button>
-        <img className='imagem1' src={imagem3d2} alt="Logo" />
-
-      </div>
-      <div className='div-container4 hidden-card'>
-        <p className='subtitulo4'>LIBERTE A CRIATIVIDADE</p>
-        <h1 className='titulo4'>DÊ VIDA ÀS SUAS IDEIAS</h1>
-        <button className='botao4' onClick={handleClickProjetos}>Ver mais</button>
-        <img className='imagem1' src={imagemDIEGO1} alt="Logo" />
-      </div>
-      <div className='div-container5 hidden-card'>
-      <p className='subtitulo5'>LIDERE O CAMINHO</p>
-        <h1 className='titulo5'>INOVE E INSPIRE</h1>
-        <button className='botao5' onClick={handleClickProjetos}>Ver mais</button>
-        <img className='ultimaImagem' src={imagemDUDA1} alt="Logo" />
-      </div>
-    </div>
-  );
+import { Link } from 'react-router-dom';
+import { ArrowDown, ArrowUpRight, Compass, Layers3, ShieldCheck } from 'lucide-react';
+import HouseExperience from '../../components/HouseExperience';
+import { projects, services } from '../../data/content';
+import hero from '../../assets/optimized/residencias.webp';
+import heroMobile from '../../assets/optimized/residencias-mobile.webp';
+import team from '../../assets/optimized/equipe-atual.webp';
+import librelato from '../../assets/clientes/librelato.png';
+import copaza from '../../assets/clientes/copaza.png';
+import budny from '../../assets/clientes/budny.png';
+import nacoesshopping from '../../assets/clientes/nacoesshopping.png';
+import poligres from '../../assets/clientes/poligres.png';
+export default function Home() {
+  return <>
+    <section className="hero"><img className="hero-image" src={hero} srcSet={`${heroMobile} 800w, ${hero} 1920w`} sizes="100vw" alt="Projeto de residências contemporâneas do acervo Carvalho e Cardoso" fetchPriority="high" /><div className="hero-shade" /><div className="hero-content"><span className="hero-kicker"><span /> Engenharia que transforma espaços</span><h1>Todo grande projeto<br />começa com<br />uma boa base.</h1><p>Da primeira ideia à obra. Arquitetura e engenharia<br className="desktop-break" /> integradas para construir o que você imagina.</p><div className="hero-actions"><Link className="button" to="/contato">Converse sobre seu projeto <ArrowUpRight size={18} /></Link><Link className="text-link light" to="/projetos">Explore nossos projetos <ArrowUpRight size={17} /></Link></div></div><div className="hero-bottom"><a href="#experiencia">Da ideia à realidade <ArrowDown size={16} /></a><span>Arquitetura, engenharia e propósito.</span><span>Içara / Santa Catarina</span></div><div className="hero-coordinate" aria-hidden="true">28°42′ S &nbsp; 49°18′ O</div></section>
+    <section className="clients-strip"><p>Relações construídas<br /><strong>com confiança.</strong></p><div>{[[librelato, 'Librelato'], [copaza, 'Copaza'], [budny, 'Budny'], [nacoesshopping, 'Nações Shopping'], [poligres, 'Poligres']].map(([src, name]) => <img key={name} src={src} alt={name} width="130" height="60" />)}</div><Link to="/clientes" aria-label="Conheça nossos clientes"><ArrowUpRight /></Link></section>
+    <section className="experience-section section-wrap" id="experiencia"><div className="section-heading"><div><span className="eyebrow">Da primeira linha ao último detalhe</span><h2>É assim que uma ideia<br />ganha estrutura.</h2></div><p>Antes de existir no mundo, um espaço nasce no papel. Unimos visão e precisão técnica para dar forma ao seu próximo passo.</p></div><HouseExperience /></section>
+    <section className="solutions-section section-wrap"><div className="section-heading"><div><span className="eyebrow">Soluções integradas</span><h2>Um olhar completo.<br />Em cada etapa.</h2></div><Link className="text-link" to="/servicos">Conheça nossas soluções <ArrowUpRight size={18} /></Link></div><div className="home-services">{services.slice(0, 3).map((s, i) => {
+          const Icon = [Compass, Layers3, ShieldCheck][i];
+          return <Link to={`/servicos#servico-${i}`} className="service-preview" key={s.title}><Icon size={34} strokeWidth={1.2} /><h3>{s.title}</h3><p>{s.text}</p><ArrowUpRight className="service-arrow" size={22} /></Link>;
+        })}</div></section>
+    <section className="projects-section section-wrap"><div className="section-heading"><div><span className="eyebrow">Nosso olhar, na prática</span><h2>Projetos que dão<br />forma a novas histórias.</h2></div><Link className="text-link" to="/projetos">Ver todos os projetos <ArrowUpRight size={18} /></Link></div><div className="featured-projects">{projects.slice(0, 2).map((p, i) => <Link className={`project-card project-${i}`} key={p.title} to={`/projetos?projeto=${i}`}><div className="project-image"><img src={p.image} alt={p.title} loading="lazy" /><span className="round-arrow"><ArrowUpRight /></span><span className="image-tag">{p.category}</span></div><div className="project-caption"><h3>{p.title}</h3><span>{p.service}</span></div></Link>)}</div></section>
+    <section className="about-preview section-wrap"><div className="about-image"><img src={team} alt="Equipe Carvalho e Cardoso no escritório" loading="lazy" /><span>As pessoas por trás de cada projeto.</span></div><div><span className="eyebrow">Carvalho & Cardoso</span><h2>Técnica que conecta.<br />Pessoas que constroem.</h2><p>Somos uma equipe multidisciplinar que acredita que um bom projeto começa com escuta e se realiza com colaboração.</p><p>Reunimos engenharia, arquitetura e experiência de obra para transformar necessidades em soluções bem resolvidas.</p><Link to="/sobrenos" className="text-link">Conheça o escritório <ArrowUpRight size={18} /></Link></div></section>
+    <section className="process-section section-wrap"><div className="section-heading"><div><span className="eyebrow">Nosso processo</span><h2>Clareza do início ao fim.</h2></div><p>Uma jornada construída em conjunto,<br />com atenção em cada decisão.</p></div><div className="process-grid">{[['Escutar', 'Entendemos suas necessidades, o terreno e os objetivos do projeto.'], ['Planejar', 'Definimos as soluções e integramos as disciplinas envolvidas.'], ['Projetar', 'Transformamos as decisões em desenhos e detalhamento técnico.'], ['Acompanhar', 'Orientamos a execução para que o projeto ganhe vida.']].map(([title, text], i) => <div key={title}><span className="process-number">0{i + 1}</span><h3>{title}</h3><p>{text}</p></div>)}</div></section>
+    <section className="contact-banner"><div><span className="eyebrow">Seu próximo projeto começa aqui</span><h2>Vamos construir<br />algo extraordinário?</h2></div><Link to="/contato" className="button">Vamos conversar <ArrowUpRight size={20} /></Link></section>
+  </>;
 }
-
-export default Home;
